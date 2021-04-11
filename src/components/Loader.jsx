@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../lotties/39011-loader-validator.json";
+import animationData from "../lotties/56231-cloud-transfer.json";
 class Loader extends React.Component {
   render() {
     const defaultOptions = {

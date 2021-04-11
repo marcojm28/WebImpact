@@ -4,18 +4,21 @@ function ListClients(props) {
 
   const data = props.clients;
 
-  console.log(data);
+  const formatDate = (x) =>{
+    var date = new Date(x);
+    return `${date.getUTCDay()}-${date.getUTCMonth()}-${date.getUTCFullYear()}`;
+  }
 
   return (
     <React.Fragment>
         {data?.map((item) => {
             return(
-            <tr>
+            <tr key={item.IdCliente}>
             <th scope="row">{item.IdCliente}</th>
             <td>{item.Nombres}</td>
             <td>{item.Apellidos}</td>
             <td>{item.Edad}</td>
-            <td>{item.FechaNacimiento}</td>
+            <td>{formatDate(item.FechaNacimiento)}</td>
           </tr>
             )
         })}
